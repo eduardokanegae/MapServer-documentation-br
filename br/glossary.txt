@@ -1,250 +1,242 @@
 .. _gloss:
 
 ***************************************************
- Glossary
+ Glossário
 ***************************************************
 
 .. glossary::
 
     AGG
         `Anti-Grain Geometry <https://en.wikipedia.org/wiki/Anti-Grain_Geometry>`__ 
-        A high quality graphics rendering engine that MapServer 5.0+ can use. 
-        It supports sub-pixel anti-aliasing, as well as many more features.
+        Mecanismo gráfico de alta qualidade que as versões do MapServer 5.0 ou superior podem utilizar. 
+        Tem suporte a sub-pixels e anti-aliasing, além de outros recursos.
 
     CGI
-        Wikipedia provides excellent coverage of 
+        Verifique o capítulo sobre CGI da Wikipedia -  
         `CGI <https://en.wikipedia.org/wiki/Common_Gateway_Interface>`_.
     
     EPSG
-        EPSG codes are numeric codes associated with coordinate system
-        definitions. For instance, EPSG:4326 is geographic WGS84, and
-        EPSG:32611 is "UTM zone 11 North, WGS84". The WMS protocol uses EPSG
-        codes to describe coordinate systems. EPSG codes are published by the
-        `OGP Surveying and Positioning Committee <https://epsg.org/home.html>`_. A
-        list of PROJ definitions corresponding to the EPSG codes can be
-        found: for PROJ version >= 6, in the  SpatiaLite database *proj.db* 
-        at /usr/local/share/proj/proj.db, or for PROJ version < 6, in the text 
-        file *epsg* at /usr/local/share/proj/epsg.  :ref:`PROJECTION` 
-        describes how to use these in your :ref:`mapfile`.
+        Códigos EPSG são códigos numéricos associados a definições
+		de sistemas de coordenadas. Por exemplo, EPSG:4326 corresponde ao
+		 WGS84 Geográfico, e o EPSG:31983 é "UTM zona 23 Sul, SIRGAS 2000". 
+		O protocolo WMS usa códigos EPSG para descrever sistemas de coordenadas. 
+		Códigos EPSG são publicados pelo 
+        `OGP Surveying and Positioning Committee <https://epsg.org/home.html>`_. Uma
+        lista de configurações PROJ correspondentes aos códigos EPSG pode ser
+		 encontrada em: PROJ versão >= 6, no banco de dados  SpatiaLite *proj.db* 
+        em /usr/local/share/proj/proj.db, ou no caso de PROJ versão < 6, no arquivo
+		 de texto *epsg* em /usr/local/share/proj/epsg.  :ref:`PROJECTION` 
+        descreve como usar este item no seu :ref:`mapfile`.
         
         .. seealso::
-            https://spatialreference.org for a listing of spatial references
-            and an interface to search for EPSG codes (the site https://epsg.io/
-            is no longer maintained, but might still be useful).
+            https://spatialreference.org para uma listagem de sistemas de referência espacial
+			e uma interface de busca por códigos EPSG (o site https://epsg.io/
+            não é mais mantido/atualizado, mas pode ajudar ).
 
     Filter Encoding
         `Filter Encoding <https://www.ogc.org/standards/filter>`__
-        is an :term:`OGC` standard which defines an XML encoding for filter
-        expressions to allow for spatial and attribute querying.
+        é um padrão :term:`OGC` que define uma forma de códificação XML para expressões
+		 de filtragem que permitem pesquisa espacial e por atributos.
         
         .. seealso::
             :ref:`filter_encoding`
 
     FreeType
-        `FreeType <https://freetype.sourceforge.net/index2.html>`__ is a font
-        engine that MapServer uses for accessing and rendering `TrueType
-        <https://en.wikipedia.org/wiki/True_Type_Font>`__ fonts.
+        `FreeType <https://freetype.sourceforge.net/index2.html>`__ é o mecanismo de 
+		fontes que o MapServer usa para acessar e renderizar fontes `TrueType
+        <https://en.wikipedia.org/wiki/True_Type_Font>`__ .
         
     GD
-        `GD <https://libgd.github.io/>`__ is a graphics library for 
-        dynamic generation of images.  It was the first graphics renderer that 
-        was available for MapServer, and was required by MapServer to 
-        operate.
+        `GD <https://libgd.github.io/>`__ é uma biblioteca gráfica para 
+        geração dinâmica de imagens. Foi o primeiro mecanismo de renderização
+		 usado pelo MapServer.
 
         .. warning::
 
-          GD support was removed in MapServer 7.0.
+          O suporte à GD foi removido no MapServer 7.0.
         
     GDAL
-        GDAL (Geospatial Data Abstraction Library) is a multi-format raster
-        reading and writing library. It is used as the primary mechanism for
-        reading raster data in MapServer. It is hosted at https://gdal.org/
+        GDAL (Geospatial Data Abstraction Library) é uma biblioteca de acesso
+		 leitura/escrita multi-formatos. No MapServer é usada como mecanismo principal
+		 no acesso a dados matriciais (rasters). Site: https://gdal.org/
 
     GEOS
-        `Geometry Engine Open Source <https://trac.osgeo.org/geos>`__ is a
-        C/C++ port of the `Java Topology Suite
-        <https://github.com/locationtech/jts>`__. It is used for
-        geometric algebra operations like determining if a polygon is
-        contained in another polygon or determining the resultant intersection
-        of two or more polygons. MapServer optionally uses GEOS for geometric
-        algebra operations.
+        `Geometry Engine Open Source <https://trac.osgeo.org/geos>`__ é um port 
+        C/C++ da `Java Topology Suite
+        <https://github.com/locationtech/jts>`__. É usada por operações de álgebra geométrica como
+		determinar se um polígono está contido em outro ou determinar a intersecção resultante
+		 de dois ou mais polígonos. O MapServer também opcionalmente pode usar a GEOS para 
+		 operações de álgebra.
 
     GML
         `Geography Markup Language <https://www.ogc.org/standards/gml>`__
-        is an :term:`OGC` standard which defines an abstract model for geographic
-        features
+        é um padrão :term:`OGC` que define um modelo abstrato para objetos geográficos 
 
         .. seealso::
             :ref:`wfs_server`
 
     GPX
         `GPS eXchange <https://en.wikipedia.org/wiki/GPX_(data_transfer)>`__
-        Format is an XML Schema for describing GPS data.  :term:`OGR` can
-        be used to transform and render this data with MapServer.
+        Format é um schema XML para descrever dados GPS.  :term:`OGR` pode
+        ser usada para transformar e renderizar estes dados com o MapServer.
 
-    Map Scale
-        A treatise of mapping scale can be found at 
+    Escala
+        Um ótimo tratado sobre escalas pode ser lido em  
         https://www.thoughtco.com/map-scale-measuring-distance-on-map-1433533 .
     
     Mapfile
-        :ref:`Mapfile <mapfile>` is the declarative language that MapServer
-        uses to define data connections, map styling, templating, and server
-        directives. Its format is xml-like and hierarchical, with closing
-        `END` tags, but the format is not xml.
+        :ref:`Mapfile <mapfile>` é a linguagem que o MapServer
+        usa para definir conexões, estilos/simbologia, templating, e diretivas de
+		 servidor. Seu formato é hierárquico, semelhanças com XML, com tags 
+        `END` que fecham instruções, mas o formato não é um arquivo XML.
     
     MapScript
-        :ref:`mapscript` is an alternative the the :ref:`cgi` application 
-        of :ref:`mapserv` that allows you to program the MapServer object 
-        API in many languages.  
+        :ref:`mapscript` é uma forma alternativa que uma aplicação :ref:`cgi` 
+		:ref:`mapserv` que permite que você use a API de objetos MapServer em várias
+		 linguagens de programação.  
     
     Mercator
-        Wikipedia provides excellent coverage of the 
-        `Mercator projection <https://en.wikipedia.org/wiki/Mercator_projection>`_.
+        Veja a Wikipedia para uma ótima cobertura sobre a  
+        `projeção Mercator <https://en.wikipedia.org/wiki/Mercator_projection>`_.
 
     OGC
-        The `Open Geospatial Consortium <https://www.ogc.org>`_ is a
-        standards organization body in the GIS domain. MapServer supports
-        numerous OGC standards.
+        O `Open Geospatial Consortium <https://www.ogc.org>`_ é um consórcio
+         de organização e definição de padrões abertos em relação a tecnologias SIG. 
+		 MapServer tem suporte a vários padrões OGC.
 
         .. seealso::
-            :ref:`wms_server` and :ref:`wms_time` and :ref:`wms_client`
-            and :ref:`wfs_server` and :ref:`wfs_client` and :ref:`wcs_server`
-            and :ref:`map_context` and :ref:`sld` and :ref:`filter_encoding`
-            and :ref:`sos_server`
+            :ref:`wms_server` e :ref:`wms_time` e :ref:`wms_client`
+            e :ref:`wfs_server` e :ref:`wfs_client` e :ref:`wcs_server`
+            e :ref:`map_context` e :ref:`sld` e :ref:`filter_encoding`
+            e :ref:`sos_server`
 
     OGR
-        OGR is the vector data access portion of
-        the :term:`GDAL` library.  It provides access to a multitude of data
-        formats.
+        OGR é a parte vetorial da biblioteca :term:`GDAL`. Provê acesso a um grande 
+		conjunto de formatos.
 
         .. seealso::
             :ref:`ogr` (Accessing OGR Layers through MapServer)
 
     OM
         `Observations and Measurements <https://www.ogc.org/standards/om>`__
-        is an :term:`OGC` standard which defines an abstract model for sensor based
-        data.
+        é um padrão :term:`OGC` que define um modelo abstrato para dados 
+        baseados em sensores.
 
         .. seealso::
             :ref:`sos_server`
     
     OpenLayers
-        `OpenLayers <https://openlayers.org>`__ is a JavaScript library for 
-        developing draggable, "slippy map" web applications.  
+        `OpenLayers <https://openlayers.org>`__ é uma biblioteca JavaScript para o  
+        desenvolvimento de aplicações webmapping.  
         
     PROJ
-        `PROJ <https://proj.org>`__ (formerly referred to as PROJ.4) is a library for projecting
-        map data. It is used by MapServer and GDAL and a multitude of other
-        Open Source GIS libraries.
+        `PROJ <https://proj.org>`__ (muitas vezes citada como PROJ.4) é uma biblioteca 
+		para reprojeção de dados geográficos. É usada pelo MapServer, GDAL e diversas outras 
+		bibliotecas e softwares SIG Open Source.
         
-    Projection
-        A map projection is a mathematical transformation of the surface of a
-        sphere (3D) onto a 2D plane. Due to the laws of the universe, each
-        type of projection must make tradeoffs on how and what features it
-        distorts.
+    Projeção
+        Uma projeção é um modelo matemático de transformação da superfície 
+		esférica (3D) em um modelo plano 2D. E de acordo com as leis do universo, 
+		cada tipo de projeção terá pontos positivos ou negativos de acordo com a 
+		característica que se deseja manter e/ou aceitar distorções.
     
     Raster
-        A raster is a rectangular grid of pixels. Essentially an image.
-        Rasters are supported in MapServer with a layer type of RASTER, and a
-        variety of formats are supported including GeoTIFF, JPEG, and PNG.
+        Um raster, conjunto de dados matriciais, é uma grade retangular de pixels. Essencialmente uma imagem.
+        Rasters são suportados no MapServer como layers de tipo RASTER, e podem 
+        ser de uma variedade grande de formatos. Tais como GeoTIFF, JPEG, e PNG.
     
     Shapefile
-        Shapefiles are simple GIS vector files containing points, lines or
-        areas. The format was designed and published by ESRI and is widely
-        supported in the GIS world. It is effectively the native and highest
-        performance format for MapServer.  
+        Shapefiles são arquivos SIG vetoriais que podem conter pontos, linhas ou
+        polígonos. Este formato foi projetado e publicado pela ESRI e é altamente suportado 
+        em diversos softwares SIG. É praticamente o formato nativo para uso com o MapServer.  
         
         .. seealso::
             `Wikipedia <https://en.wikipedia.org/wiki/Shapefile>`_ 
     
     SLD
-        `SLD <https://www.ogc.org/standards/sld>`__ is an :term:`OGC`
-        standard which allows for custom symbolization for portrayal of data.
+        `SLD <https://www.ogc.org/standards/sld>`__ é um padrão :term:`OGC`
+        que permite simbologias customizadas de uma porção de dados.
 
         .. seealso::
             :ref:`sld`
 
     SOS
-        `SOS <https://www.ogc.org/standards/sos>`__ is an :term:`OGC`
-        standard which provides an API for managing deployed sensors and
-        retrieving sensor and observation data.
+        `SOS <https://www.ogc.org/standards/sos>`__ é um padrão :term:`OGC`
+        que fornece uma API para acesso/obtenção de dados de sensores.
         
         .. seealso::
             :ref:`sos_server`
     
     Spherical Mercator
         `Spherical Mercator <https://en.wikipedia.org/wiki/Web_Mercator_projection>`__ 
-        (or more commonly known as the *Google Mercator*, or *Web Mercator*) is a 
-        term used to describe the default :ref:`PROJECTION` used by many commercial 
-        API providers for their resulting map tiles & services.  The associated official 
-        EPSG code is `EPSG:3857 <https://spatialreference.org/ref/epsg/3857/>`__ (formerly "EPSG:900913").
+        (também conhecida como *Google Mercator*, ou *Web Mercator*) é um termo  
+        usado para descrever a :ref:`PROJECTION` padrão usada por muitas opções de  
+        API para prover conteúdo em map tiles & serviços.  O código 
+        EPSG padrão associado é o `EPSG:3857 <https://spatialreference.org/ref/epsg/3857/>`__ (vulgo "EPSG:900913").
     
     SVG
-        `Scalable Vector Graphics <https://en.wikipedia.org/wiki/Scalable_Vector_Graphics>`__ is 
-        an XML format that MapServer can output.  It is frequently used in 
-        browser and mobile devices.  
+        `Scalable Vector Graphics <https://en.wikipedia.org/wiki/Scalable_Vector_Graphics>`__ é 
+        um formato XML que o MapServer pode gerar conteúdos.  Muito usado em navegadores e
+		 dispositivos móveis.  
         
         .. seealso::
             :ref:`svg`
     
     SWF
-        `Shockwave Flash <https://en.wikipedia.org/wiki/SWF>`__ format that
-        MapServer can generate for output.
+        `Shockwave Flash <https://en.wikipedia.org/wiki/SWF>`__ formato que o 
+        MapServer oferece suporte a saída de dados.
 
         .. seealso::
             :ref:`flash`
 
     SWIG
-        `Simplified Wrapper Interface Generator <https://www.swig.org/>`__ is the 
-        library that MapServer uses for generating the language bindings for 
-        all languages other than C/C++ and PHP.  :ref:`mapscript` describes 
-        these bindings.
+        `Simplified Wrapper Interface Generator <https://www.swig.org/>`__ é a biblioteca  
+        que o MapServer usa para gerar interfaces com outras linguagens que não sejam  
+        C/C++ e PHP. O capítulo :ref:`mapscript` descreve essas interfaces.
     
     Tileindex
-        A tileindex is a :term:`Shapefile` or other :term:`Vector` data
-        source that contains footprints of :term:`Raster` data coverage.
-        MapServer can use a tileindex to render a directory of raster
-        data.  The tileindex allows MapServer to only read the data that
-        intersects the requested map extent, rather than reading all of the
-        data.
+        O tileindex pode ser um :term:`Shapefile` ou outra fonte de dados :term:`Vector` que 
+		contenha *footprints* da cobertura de um :term:`Raster`.
+        O MapServer pode usar um tileindex para renderizar todo um diretório contendo 
+		vários arquivos matriciais.  O tileindex permite que MapServer faça a leitura apenas 
+		dos dados que fazem intersecção com a extensão do mapa solicitado, ao invés de 
+		fazer a leitura e processamento de todos os dados.
         
         .. seealso::
             :ref:`tileindex`
 
     Vector
-        Geographic features described by geometries (point, line, polygon) on 
-        a (typically) cartesian plane.
+        Objetos geográficos descritos por geometrias (ponto, linha, polígono) em um plano cartesiano.
     
     WCS
-        `WCS <https://en.wikipedia.org/wiki/Web_Coverage_Service>`__ is an
-        :term:`OGC` standard that describes how to systematically produce 
-        structured :term:`Raster` cartographic data from a service and 
-        return them to a client
+        `WCS <https://en.wikipedia.org/wiki/Web_Coverage_Service>`__ é um padrão 
+        :term:`OGC` que descreve como um serviço pode sistematicamente prover dados 
+		 :term:`Raster` e retorná-los para a solicitação cliente. Seu uso mais comum é 
+		para prover dados como um modelo digital de elevação ou derivados.
         
         .. seealso::
-            :ref:`wcs_server` and :ref:`wcs_format`
+            :ref:`wcs_server` e :ref:`wcs_format`
     
     WFS
-        `WFS <https://en.wikipedia.org/wiki/Web_Feature_Service>`__ is an 
-        :term:`OGC` standard that describes how to systematically produce 
-        structured :term:`Vector` cartographic data from a service and return them to 
-        a client.  
+        `WFS <https://en.wikipedia.org/wiki/Web_Feature_Service>`__ é um padrão  
+        :term:`OGC` que descreve como um serviço pode prover dados vetoriais ( :term:`Vector` )
+		de forma estrutura e retornar atributos e geometriais para o cliente solicitante.  
         
         .. seealso::
-            :ref:`wfs_server` and :ref:`wfs_client`
+            :ref:`wfs_server` e :ref:`wfs_client`
 
     WMC
-        `Web Map Context <https://www.ogc.org/standards/wmc>`__ is an
-        :term:`OGC` standard which allows for sharing of map views of :term:`WMS`
-        layers in multiple applications.
+        `Web Map Context <https://www.ogc.org/standards/wmc>`__ é um padrão 
+        :term:`OGC` que especifica o compartilhamento de visões de mapas de 
+		serviços :term:`WMS` em múltiplas aplicações.
 
         .. seealso::
             :ref:`map_context`
 
     WMS
-        `WMS <https://en.wikipedia.org/wiki/Web_Map_Service>`__ is an 
-        :term:`OGC` standard that describes how to systematically produce 
-        rendered map images from a service and return them to a client.
+        `WMS <https://en.wikipedia.org/wiki/Web_Map_Service>`__ é um padrão  
+        :term:`OGC` que especifica o serviço que provê imagens de mapas renderizadas
+		e retornadas de um serviço para uma solicitação cliente.
 
         .. seealso::
-            :ref:`wms_server` and :ref:`wms_client` 
+            :ref:`wms_server` e :ref:`wms_client` 

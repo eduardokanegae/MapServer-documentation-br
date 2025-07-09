@@ -1,69 +1,69 @@
 .. _about:
 
 *****************************************************************************
- About
+ Sobre
 *****************************************************************************
 
-MapServer is an `Open Source`_ geographic data rendering engine written in C.
-Beyond browsing GIS data, MapServer allows you create "geographic image maps",
-that is, maps that can direct users to content. For example, the Minnesota DNR
-`Recreation Compass <https://www.dnr.state.mn.us/maps/compass/index.html>`__ provides
-users with more than 10,000 web pages, reports and maps via a single
-application. The same application serves as a "map engine" for other portions
-of the site, providing spatial context where needed.  For more live examples, 
-please see the MapServer `Site Gallery <https://github.com/MapServer/MapServer/wiki/MapServer-Site-Gallery>`__.
+O MapServer é um mecanismo `Open Source`_ para renderização de dados geográficos 
+escrito em linguagem C. Além da navegação por dados geográficos, o MapServer permite
+que você crie "imagens de mapas geográficos", ou seja, mapas que podem direcionar usuários
+ao conteúdo. Por exemplo, o Minnesota DNR
+`Recreation Compass <https://www.dnr.state.mn.us/maps/compass/index.html>`__ fornece
+aos seus usuários mais de 10.000 páginas web, relatórios e mapas através de uma única 
+aplicação. Essa mesma aplicação também opera como um "motor de mapas" para outras 
+partes do site do DNR, fornecendo contextualização espacial quando necessário.
+Para mais exemplos "ao vivo", veja o MapServer `Site Gallery <https://github.com/MapServer/MapServer/wiki/MapServer-Site-Gallery>`__.
 
-MapServer was originally developed by the University of Minnesota (UMN) ForNet
-project in cooperation with NASA, and the Minnesota Department of Natural
-Resources (MNDNR). Later it was hosted by the TerraSIP project, a NASA
-sponsored project between the UMN and a consortium of land management
-interests.
+O MapServer foi originalmente desenvolvido pelo projeto ForNet da Universidade de
+Minnesota (UMN) em cooperação com a NASA e o Departmento de Recursos Naturais de 
+Minnesota (MNDNR). Posteriormente foi suportado pelo projeto TerraSIP, um projeto
+financiado pela NASA e realizado numa parceria entre a UMN e um consórcio de 
+interessados em gestão territorial.
 
-MapServer is one of the founding projects of the `OSGeo <https://www.osgeo.org>`__ 
-foundation, and is maintained by a growing number of developers (nearing 20) 
-from around the world. It is supported by a diverse group of organizations that fund
-enhancements and maintenance, and administered within OSGeo by the MapServer
-:ref:`Project Steering Committee <psc>` made up of developers and other
-contributors.  All source code is openly available via 
-`GitHub <https://github.com/MapServer/>`__.
+O MapServer é um dos projetos que ajudou a criar a fundação `OSGeo <https://www.osgeo.org>`__ 
+, e é mantido por um crescente número de desenvolvedores (aproximadamente 20) por todo
+o globo. E é suportado por um grupo diversificado de organizações que financiam melhorias,
+ manutenção contínua e gerenciam recursos juntamente com o MapServer
+:ref:`Project Steering Committee <psc>` da OSGeo, que é composto de desenvolvedores e
+outros tipos de contribuidores. Todo código-fontre do MapServer está disponível abertamente
+via `GitHub <https://github.com/MapServer/>`__.
 
-- Advanced cartographic output
+- Recursos de saída cartográfica avançada
 
-  - Scale dependent feature drawing and application execution
-  - Feature labeling including label collision mediation
-  - Fully customizable, template driven output
-  - TrueType fonts
-  - Map element automation (scalebar, reference map, and legend)
-  - Thematic mapping using logical- or regular expression-based classes
+  - Desenho de objetos com dependência de escala e execução de aplicações
+  - Rótulos em objetos, incluindo a mediação de colisões de rótulos
+  - Altamente customizável, saída orientada a modelos
+  - Fontes TrueType
+  - Automação de elementos de Mapas (barra de escala, mapa de referência, e legenda)
+  - Mapas temáticos usando expressões lógicas / expressões regulares para classficação
 
-- Support for popular scripting and development environments
+- Suporte a linguagens de programação populares
 
   - PHP, Python, Perl, Ruby, Java, and .NET
 
-- Cross-platform support
+- Multi-plataforma
 
-  - Linux, Windows, Mac OS X, Solaris, and more
+  - Linux, Windows, Mac OS X, Solaris, e mais
 
-- Support of numerous :term:`Open Geospatial Consortium <OGC>` (OGC) standards
+- Suporte a vários padrões :term:`Open Geospatial Consortium <OGC>` (OGC) 
 
-  - WMS (client/server), non-transactional WFS (client/server), WMC, WCS,
+  - WMS (client/server), WFS não transacional(client/server), WMC, WCS,
     Filter Encoding, SLD, GML, SOS, OM, OGC API: Features
 
-- A multitude of raster and vector data formats
+- Uma infinidade de formatos vetoriais e matriciais 
 
-  - TIFF/GeoTIFF, NetCDF, MrSID, ECW, and many others via :term:`GDAL`
+  - TIFF/GeoTIFF, NetCDF, MrSID, ECW, e vários outros via :term:`GDAL`
   - :ref:`ESRI shapfiles <shapefiles>`, :ref:`PostGIS <input_postgis>`,
     :ref:`SpatiaLite <sqlite>`, :ref:`GeoPackage <geopackage>`, 
     :ref:`FlatGeobuf <flatgeobuf>`, Mapbox Vector Tile (MVT), 
-    :ref:`Oracle Spatial <oci>`, :ref:`MySQL <mysql>` and many 
-    others via :term:`OGR`
+    :ref:`Oracle Spatial <oci>`, :ref:`MySQL <mysql>` e vários outros via :term:`OGR`
 
-- Map projection support
+- Suporte a reprojeção de Mapas
 
-  - On-the-fly map projection with 1000s of projections through the 
-    :term:`PROJ` library
+  - Reprojeção de mapas em tempo de execução com cerca de 1.000 especificações de sistemas de projeção através da biblioteca 
+    :term:`PROJ`
 	
 .. _`Open Source`: https://opensource.org
 
-.. note:: For a list of current companies offering professional MapServer support see
+.. nota:: Para uma lista de empresas oferecendo suporte profissional em MapServer veja
    :ref:`Service Providers <service_providers>`.

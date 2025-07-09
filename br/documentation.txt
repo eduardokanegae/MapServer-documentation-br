@@ -1,19 +1,19 @@
 .. _documentation:
 
 ***************************************************
- MapServer |release| Documentation
+ Documentação do MapServer |release|
 ***************************************************
 
-.. note::
-    The entire documentation is also available as a single
-    `PDF document <https://download.osgeo.org/mapserver/docs/MapServer.pdf>`__ |image|
+.. nota::
+    A documentação inteira também fica disponível na forma de 
+	um único
+    `arquivo PDF <https://download.osgeo.org/mapserver/docs/MapServer.pdf>`__ |image|
 
-    If you are upgrading from an earlier version of MapServer, be sure to
-    review the 
-    :ref:`MapServer Migration Guide <migration>`.
+    Se você está fazendo upgrade de versão anterior, verifique também
+	a série :ref:`MapServer Migration Guide <migration>`.
 
-    Documentation for earlier versions of MapServer can be found on the
-    :ref:`Download page <docspreviousreleases>`.
+    A documentação de versões anteriores pode ser encontrada
+	na seção :ref:`Download page <docspreviousreleases>`.
 
 .. |image| image:: ./../_static/pdf.png
    :height: 15
